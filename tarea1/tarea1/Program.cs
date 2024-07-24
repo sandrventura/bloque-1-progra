@@ -1,38 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Net.Configuration;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace tarea1
 {
     internal class Program
-    {
-        static void Main(string[] args)
-        {
-            while (true)
-            {
-                Console.WriteLine(" ingrese un numero");
-                int numero = int.Parse(Console.ReadLine());
+    { 
+        static void Main(string[] args) 
+        {   
+            Console.Write("dime la tabla: ");
+            int ntabla = int.Parse(Console.ReadLine());
+            for (int i = 1; i<=10; i++) {
+                Console.WriteLine("{0} x {1} = {2}", ntabla, i, ntabla * i);
 
-                if (numero == 0)
-                {
-                    Console.WriteLine("");
-                }
 
-                if (numero > 0)
 
-                {
-                    Console.WriteLine("es numero positivo");
-                }
+                Console.WriteLine("Presione 0 para salir...");
 
-                else
-                {
-                    Console.WriteLine(" el numero es negativo");
-                    Console.WriteLine("finalizado");
-                }
+
+
 
             }
 
