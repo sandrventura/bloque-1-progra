@@ -4,28 +4,43 @@ namespace tarea1
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
+        
+            static void Main(string[] args)
             {
+                double suma = 0;
+                int contador = 0;
 
-                Console.WriteLine("Ingrese un número:");
-                int numero = int.Parse(Console.ReadLine());
+                double numero;
 
-                if (numero  >=2)
+                do
                 {
-                    Console.WriteLine($"{numero} es un número primo.");
+                    Console.WriteLine("Ingrese un número (0 para finalizar):");
+                    numero = double.Parse(Console.ReadLine());
+
+                    if (numero != 0)
+                    {
+                        suma += numero;
+                        contador++;
+                    }
+                } while (numero != 0);
+
+                if (contador > 0)
+                {
+                    double promedio = suma / contador;
+                    Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
                 }
                 else
                 {
-                    Console.WriteLine($"{numero} no es un número primo.");
-                }
+                    Console.WriteLine("No se ingresaron números.");
                 Console.ReadLine();
+                }
             }
         }
-       
 
-    }
-}
+
+
+            }
+  
 
 
 
