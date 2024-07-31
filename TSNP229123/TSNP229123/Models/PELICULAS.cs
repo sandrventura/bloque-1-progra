@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
-
 namespace TSNP229123.Models
 {
     public class PELICULAS
     {
         [Key]
-        public int IdPeliculas { get; set; }
+        public int IdPeliculas{ get; set; }
         public int CodigodePelicula { get; set; }
         public int Titulo { get; set; }
         public int Autor { get; set; }
